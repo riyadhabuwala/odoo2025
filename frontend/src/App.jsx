@@ -7,17 +7,18 @@ import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import Footer from './components/Footer'
 
+
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <>
       <Header />
       <SearchBar />
       <LandingPage />
-      <Footer /> 
-      
-      </div>
+      <Footer />
+    </>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assets/images/rewear.png.png"; // Adjust the path as necessary
+import logo from "../assets/images/rewear.png.png"; // Fixed path
+import { Link } from "react-router-dom";
 
 const headerStyles = {
   display: "flex",
@@ -30,13 +31,19 @@ const btnBase = {
   transition: "background 0.2s, color 0.2s",
 };
 
-const signupBtnStyles = {
-  ...btnBase,
+const centerTextStyles = {
+  position: "absolute",
+  left: "50%",
+  transform: "translateX(-50%)",
+  fontFamily: "'Great Vibes', cursive", // Use imported font
+  fontSize: "70px",
+  fontWeight: "normal",
+  color: "#000",
+  whiteSpace: "nowrap",
 };
 
-const userBtnStyles = {
-  ...btnBase,
-};
+const signupBtnStyles = { ...btnBase };
+const userBtnStyles = { ...btnBase };
 
 function Header() {
   const [signupHover, setSignupHover] = React.useState(false);
@@ -45,44 +52,46 @@ function Header() {
   return (
     <header style={headerStyles}>
       <img src={logo} alt="Logo" style={logoStyles} />
+      <div style={centerTextStyles}>ReWear</div>
       <div style={headerButtonsStyles}>
-        <button
-          style={
-            signupHover
-              ? {
-                  ...signupBtnStyles,
-                  background: "#fff",
-                  color: "#ffd1dc",
-                  border: "2px solid #000",
-                }
-              : signupBtnStyles
-          }
-          onMouseEnter={() => setSignupHover(true)}
-          onMouseLeave={() => setSignupHover(false)}
-        >
-          Sign Up
-        </button>
-        <button
-          style={
-            userHover
-              ? {
-                  ...userBtnStyles,
-                  background: "#fff",
-                  color: "#ffd1dc",
-                  border: "2px solid #000",
-                }
-              : userBtnStyles
-          }
-          onMouseEnter={() => setUserHover(true)}
-          onMouseLeave={() => setUserHover(false)}
-        >
-          User
-        </button>
+        <Link to="/Signup">
+          <button
+            style={
+              signupHover
+                ? {
+                    ...signupBtnStyles,
+                    background: "#fff",
+                    color: "#ffd1dc",
+                  }
+                : signupBtnStyles
+            }
+            onMouseEnter={() => setSignupHover(true)}
+            onMouseLeave={() => setSignupHover(false)}
+          >
+            Sign Up
+          </button>
+        </Link>
+
+        <Link to="/Dashboard">
+          <button
+            style={
+              userHover
+                ? {
+                    ...userBtnStyles,
+                    background: "#fff",
+                    color: "#ffd1dc",
+                  }
+                : userBtnStyles
+            }
+            onMouseEnter={() => setUserHover(true)}
+            onMouseLeave={() => setUserHover(false)}
+          >
+            User
+          </button>
+        </Link>
       </div>
     </header>
   );
 }
 
 export default Header;
-
-

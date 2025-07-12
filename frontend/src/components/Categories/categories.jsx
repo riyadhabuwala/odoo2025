@@ -1,14 +1,18 @@
 // src/components/CategorySection.jsx
 import React from "react";
 import './categories.css'
+import jeansImg from '../../assets/images/jeans.jpeg';
+import tshirtImg from '../../assets/images/tshirt.jpeg';
+import dressImg from '../../assets/images/dress.jpeg';
+import accessoriesImg from '../../assets/images/accessories.jpeg';
+import footwearImg from '../../assets/images/footwear.jpeg';
+
 const categories = [
-  { name: "Tops", image: "/assets/tops.png", color: "#FFE0E9" },
-  { name: "Bottoms", image: "/assets/bottoms.png", color: "#DFF5FF" },
-  { name: "Outerwear", image: "/assets/outerwear.png", color: "#FFF0D1" },
-  { name: "Dresses", image: "/assets/dresses.png", color: "#D7E9F7" },
-  { name: "Accessories", image: "/assets/accessories.png", color: "#E5D1FA" },
-  { name: "Footwear", image: "/assets/footwear.png", color: "#C3FDB8" },
-  { name: "Other", image: "/assets/other.png", color: "#F0F0F0" },
+  { name: "Bottoms", image: jeansImg, color: "#DFF5FF" },
+  { name: "Outerwear", image: tshirtImg, color: "#FFF0D1" },
+  { name: "Dresses", image: dressImg, color: "#D7E9F7" },
+  { name: "Accessories", image: accessoriesImg, color: "#E5D1FA" },
+  { name: "Footwear", image: footwearImg, color: "#C3FDB8" },
 ];
 
 
