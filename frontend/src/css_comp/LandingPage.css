@@ -1,0 +1,94 @@
+/* Make the landing page take full viewport height and width */
+.landing-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: #ffe4ec;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full width ImageCarousel section */
+.image-carousel-section {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+/* Full width CategorySection */
+.category-section {
+  width: 100vw;
+  max-width: 100vw;
+  background: #ffd1dc;
+  padding: 20px 0 40px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Example: Style for category cards inside CategorySection */
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;        /* 👈 Allows wrapping to new lines */
+  
+  gap: 24px;
+  justify-content: center;
+  width: 85vw;
+  max-width: 1000px;
+}
+
+.category-card {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 16px;
+  padding: 20px 24px;
+  min-width: 180px;
+  min-height: 100px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff69b4;
+  transition: transform 0.15s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .category-cards {
+    gap: 18px;
+    width: 98vw;
+  }
+  .category-card {
+    padding: 20px 12px;
+    min-width: 140px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-carousel-section,
+  .category-section {
+    padding: 0;
+  }
+  .category-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .category-card {
+    width: 90vw;
+    min-width: unset;
+  }
+}
