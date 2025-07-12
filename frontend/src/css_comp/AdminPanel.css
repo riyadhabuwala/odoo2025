@@ -1,0 +1,107 @@
+/* AdminPanel.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Apply warm beige to entire background */
+.admin-panel {
+  min-height: 100vh;
+  background-color: #EDE6DB;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Topbar styles */
+.topbar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  color: #5B7553; /* Earthy Green */
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tabs button {
+  background-color: white;
+  border: 2px solid #5B7553;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #5B7553;
+}
+
+.tabs button:hover {
+  background-color: #F1C93B; /* Sunflower Yellow */
+  color: #3A3A3A;
+}
+
+/* Section heading */
+.section-heading {
+  text-align: center;
+  color: #5B7553;
+  margin-bottom: 20px;
+}
+
+/* User Cards */
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-card {
+  background-color: white;
+  border: 2px solid #C9A27E; /* Soft Clay */
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #A9B7A5; /* Sage */
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex-grow: 1;
+  margin-left: 16px;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.user-actions button:first-child {
+  background-color: #5B7553; /* Earthy Green */
+}
+
+.user-actions button:last-child {
+  background-color: #D8A48F; /* Dusty Rose */
+}
