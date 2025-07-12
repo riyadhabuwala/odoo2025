@@ -47,7 +47,6 @@ function checkFileType(file, cb) {
     cb('Error: Images Only!');
   }
 }
-
 // --- Item API Routes ---
 
 // @route   GET /api/items
